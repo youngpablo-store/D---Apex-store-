@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>G- Fashio Store</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#f1f5f9;color:#0a1931}
+.header{background:#0a1931;color:white;text-align:center;padding:24px 15px;border-bottom:4px solid #ffeb3b}
+.header h1{color:#ffeb3b;font-size:22px}
+.header h2{color:#ff4081;margin:6px 0}
+.tag{font-style:italic;color:#94a3b8}
+.badge{display:inline-block;background:#25D366;color:white;padding:6px 14px;border-radius:20px;margin-top:10px;font-weight:bold}
+.container{max-width:900px;margin:18px auto;background:white;border-radius:12px;padding:18px;box-shadow:0 6px 20px rgba(0,0,0,0.08)}
+.title{background:#0a1931;color:#ffeb3b;padding:12px;text-align:center;border-radius:8px;font-weight:bold;margin-bottom:14px}
+.title.jersey{background:#e91e63;color:white}
+table{width:100%;border-collapse:collapse}
+th{background:#0f172a;color:#ffeb3b;padding:10px 6px;font-size:12px}
+td{padding:10px 6px;border-bottom:1px solid #e2e8f0;text-align:center;font-size:14px}
+tr:nth-child(even){background:#f8fafc}
+input.qty{width:62px;padding:7px;text-align:center;border:2px solid #0a1931;border-radius:6px;font-weight:bold}
+.row-total{font-weight:bold;color:#0a1931}
+.total-box{background:#0a1931;color:#ffeb3b;padding:14px;border-radius:8px;text-align:center;font-weight:bold;margin-top:12px;font-size:16px}
+.total-box.jersey{background:#e91e63;color:white}
+.form input{width:100%;padding:13px;margin:8px 0;border:2px solid #e2e8f0;border-radius:8px;font-size:15px}
+.btn{width:100%;padding:16px;background:#25D366;color:white;border:none;border-radius:10px;font-size:18px;font-weight:bold;margin-top:14px;cursor:pointer}
+.footer{text-align:center;padding:24px;color:#64748b}
+.float{position:fixed;bottom:18px;right:18px;background:#25D366;color:white;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,0.3)}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>G- Fashion Store</h1>
+<h2>...Style, Quality and Class</h2>
+<p class="tag">Shop Smart... Look Great!</p>
+<div class="badge">WhatsApp: +234 706 769 1468</div>
+</div>
+
+<div class="container">
+<div class="title">GENERAL PRODUCTS</div>
+<table id="products">
+<tr><th>S/N</th><th>Product</th><th>Price</th><th>Qty</th><th>Total</th></tr>
+<tr><td>1</td><td>Football Boot</td><td>25000</td><td><input class="qty" type="number" min="0" value="0" data-price="25000" oninput="calc()"></td><td class="row-total">0</td></tr>
+<tr><td>2</td><td>Football</td><td>15000</td><td><input class="qty" type="number" min="0" value="0" data-price="15000" oninput="calc()"></td><td class="row-total">0</td></tr>
+<tr><td>3</td><td>Wristwatch</td><td>10000</td><td><input class="qty" type="number" min="0" value="0" data-price="10000" oninput="calc()"></td><td class="row-total">0</td></tr>
+<tr><td>4</td><td>Sneakers</td><td>30000</td><td><input class="qty" type="number" min="0" value="0" data-price="30000" oninput="calc()"></td><td class="row-total">0</td></tr>
+<tr><td>5</td><td>School Bag</td><td>12000</td><td><input class="qty" type="number" min="0" value="0" data-price="12000" oninput="calc()"></td><td class="row-total">0</td></tr>
+<tr><td>6</td><td>Headphone</td><td>8000</td><td><input class="qty" type="number" min="0" value="0" data-price="8000" oninput="calc()"></td><td class="row-total">0</td></tr>
+<tr><td>7</td><td>Handbag</td><td>15000</td><td><input class="qty" type="number" min="0" value="0" data-price="15000" oninput="calc()"></td><td class="row-total">0</td></tr>
+<tr><td>8</td><td>Sunglasses</td><td>5000</td><td><input class="qty" type="number" min="0" value="0" data-price="5000" oninput="calc()"></td><td class="row-total">0</td></tr>
+<tr><td>9</td><td>Cap</td><td>4000</td><td><input class="qty" type="number" min="0" value="0" data-price="4000" oninput="calc()"></td><td class="row-total">0</td></tr>
+<tr><td>10</td><td>Socks</td><td>2000</td><td><input class="qty" type="number" min="0" value="0" data-price="2000" oninput="calc()"></td><td class="row-total">0</td></tr>
+</table>
+<div class="total-box" id="total-products">Total Products: 0</div>
+</div>
+
+<div class="container">
+<div class="title jersey">JERSEYS</div>
+<table id="jerseys">
+<tr><th>S/N</th><th>Jersey</th><th>Price</th><th>Qty</th><th>Total</th></tr>
+<tr><td>1</td><td>Man City</td><td>18000</td><td><input class="qty" type="number" min="0" value="0" data-price="18000" oninput="calc()"></td><td class="row-total">0</td></tr>
+<tr><td>2</td><td>Chelsea</td><td>18000</td><td><input class="qty" type="number" min="0" value="0" data-price="18000" oninput="calc()"></td><td class="row-total">0</td></tr>
+<tr><td>3</td><td>Arsenal</td><td>18000</td><td><input class="qty" type="number" min="0" value="0" data-price="18000" oninput="calc()"></td><td class="row-total">0</td></tr>
+<tr><td>4</td><td>Man Utd</td><td>18000</td><td><input class="qty" type="number" min="0" value="0" data-price="18000" oninput="calc()"></td><td class="row-total">0</td></tr>
+<tr><td>5</td><td>Real Madrid</td><td>20000</td><td><input class="qty" type="number" min="0" value="0" data-price="20000" oninput="calc()"></td><td class="row-total">0</td></tr>
+<tr><td>6</td><td>Barcelona</td><td>20000</td><td><input class="qty" type="number" min="0" value="0" data-price="20000" oninput="calc()"></td><td class="row-total">0</td></tr>
+<tr><td>7</td><td>Liverpool</td><td>18000</td><td><input class="qty" type="number" min="0" value="0" data-price="18000" oninput="calc()"></td><td class="row-total">0</td></tr>
+<tr><td>8</td><td>PSG</td><td>20000</td><td><input class="qty" type="number" min="0" value="0" data-price="20000" oninput="calc()"></td><td class="row-total">0</td></tr>
+<tr><td>9</td><td>Nigeria</td><td>15000</td><td><input class="qty" type="number" min="0" value="0" data-price="15000" oninput="calc()"></td><td class="row-total">0</td></tr>
+<tr><td>10</td><td>Juventus</td><td>18000</td><td><input class="qty" type="number" min="0" value="0" data-price="18000" oninput="calc()"></td><td class="row-total">0</td></tr>
+</table>
+<div class="total-box jersey" id="total-jerseys">Total Jerseys: 0</div>
+</div>
+
+<div class="container form">
+<h3 style="text-align:center">Order Details</h3>
+<input id="custName" placeholder="Customer's Name">
+<input id="sellerName" placeholder="Seller's Name">
+<input id="orderDate" type="date">
+<div class="total-box" id="grandTotal" style="font-size:20px">GRAND TOTAL: 0</div>
+<button class="btn" onclick="orderWhatsApp()">Order on WhatsApp - 2347067691468</button>
+<a href="https://wa.me/2347067691468" target="_blank" style="display:block;text-align:center;margin-top:12px;color:#25D366;font-weight:bold;text-decoration:none">Chat Directly on WhatsApp</a>
+</div>
+
+<div class="footer">D - APEX UNIQUE HAIRS AND COLLECTIONS<br>Shop Smart... Look Great!</div>
+<a class="float" href="https://wa.me/2347067691468" target="_blank">W</a>
+
+<script>
+document.getElementById('orderDate').valueAsDate=new Date();
+function calc(){
+let pt=0,jt=0;
+document.querySelectorAll('#products tr').forEach((r,i)=>{if(i==0)return;let inp=r.querySelector('input');let p=parseInt(inp.dataset.price);let q=parseInt(inp.value)||0;let t=p*q;r.querySelector('.row-total').innerText=t.toLocaleString();pt+=t;});
+document.querySelectorAll('#jerseys tr').forEach((r,i)=>{if(i==0)return;let inp=r.querySelector('input');let p=parseInt(inp.dataset.price);let q=parseInt(inp.value)||0;let t=p*q;r.querySelector('.row-total').innerText=t.toLocaleString();jt+=t;});
+document.getElementById('total-products').innerText='Total Products: N'+pt.toLocaleString();
+document.getElementById('total-jerseys').innerText='Total Jerseys: N'+jt.toLocaleString();
+document.getElementById('grandTotal').innerText='GRAND TOTAL: N'+(pt+jt).toLocaleString();
+}
+function orderWhatsApp(){
+let c=document.getElementById('custName').value||'Customer';
+let s=document.getElementById('sellerName').value||'D-APEX';
+let d=document.getElementById('orderDate').value;
+let m='*D-APEX ORDER*%0A%0ACustomer: '+c+'%0ADate: '+d+'%0ASeller: '+s+'%0A%0A*PRODUCTS:*%0A';
+document.querySelectorAll('#products tr').forEach((r,i)=>{if(i==0)return;let n=r.cells[1].innerText;let q=r.querySelector('input').value;let t=r.querySelector('.row-total').innerText;if(parseInt(q)>0)m+=n+' x'+q+' = N'+t+'%0A';});
+m+='%0A*JERSEYS:*%0A';
+document.querySelectorAll('#jerseys tr').forEach((r,i)=>{if(i==0)return;let n=r.cells[1].innerText;let q=r.querySelector('input').value;let t=r.querySelector('.row-total').innerText;if(parseInt(q)>0)m+=n+' Jersey x'+q+' = N'+t+'%0A';});
+m+='%0A'+document.getElementById('total-products').innerText+'%0A'+document.getElementById('total-jerseys').innerText+'%0A*'+document.getElementById('grandTotal').innerText+'*%0A%0AShop Smart... Look Great!';
+window.open('https://wa.me/2347067691468?text='+m,'_blank');
+}
+</script>
+</body>
+</html>
